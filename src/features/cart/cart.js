@@ -1,8 +1,9 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import store from '../../config/store'
 
 function Cart(props){
-    console.log("cart",props.cart)
+    console.log("cart",store.getState())
     return(
         <table>
             <thead>

@@ -45,3 +45,4 @@ function ListaProductos(props){
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(ListaProductos)
+// export default ListaProductos
