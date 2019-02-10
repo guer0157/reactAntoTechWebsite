@@ -1,0 +1,69 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "CK-100",
+        "description": "PROGRAMADOR",
+        "keywords": [
+          "stuffed", "plush", "groot", "guardians of the galaxy"
+        ],
+        "image": "ck100-main-8.png",
+        "age": [
+          "0", "+"
+        ],
+        "price": 19.99
+      },
+      {
+        "id": 2,
+        "name": "Figo",
+        "description": "SIMULADOR",
+        "keywords": [
+          "action figure", "toy story", "posable", "requires batteries"
+        ],
+        "image": "figo-main-8.png",
+        "age": [
+          "3", "10"
+        ],
+        "price": 38.50
+      },
+      {
+        "id": 3,
+        "name": "Multicode",
+        "description": "LECTOR",
+        "keywords": [
+          "stuffed", "plush", "minions", "Despicable Me"
+        ],
+        "image": "multicode-8.png",
+        "age": [
+          "0", "10"
+        ],
+        "price": 12.99
+      },
+      {
+        "id": 4,
+        "name": "IKEY 820",
+        "description": "PROGRAMADOR",
+        "keywords": [
+          "stuffed", "plush", "minions", "Despicable Me"
+        ],
+        "image": "ikey820-main-8.png",
+        "age": [
+          "0", "10"
+        ],
+        "price": 12.99
+      },
+      {
+        "id": 5,
+        "name": "T-300",
+        "description": "PROGRAMADOR",
+        "keywords": [
+          "stuffed", "plush", "minions", "Despicable Me"
+        ],
+        "image": "t-300-main-8.png",
+        "age": [
+          "0", "10"
+        ],
+        "price": 12.99
+      }
+    ]
+  }
