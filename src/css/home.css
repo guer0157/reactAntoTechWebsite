@@ -3,6 +3,10 @@
    yellow: rgba(249,204,80, 0.9)
    grey: rgba(118,118,118, 0.9)
 */
+*{
+    padding: 0;
+    margin: 0;
+}
 .header.home{
     background-color: rgba(18,64,124, 0.9);
     background-image: url(../img/background.jpg);
@@ -49,6 +53,7 @@ img{
 }
 .section-icons-1{
     margin-top: 0;
+    margin-bottom: 0;
     background: linear-gradient(110deg,rgba(249,204,80, 0.9) 50%,rgba(249,204,80, 1), rgba(0, 0, 0, .7)  50%,rgba(0, 0, 0, 0.1) 50.5%,rgba(255, 255, 255,1) 50.5%,rgba(255, 255, 255,1));
 }
 
@@ -85,16 +90,35 @@ img{
 .map{
     margin:2rem;
 }
+.eventosMain{
+    height:350px;
+    margin-top: 0;
+   background-image: url(../img/map1.jpg);
+}
+.eventosMain-inner{
+    margin-top: 0;
+    height:100%;
+    background: linear-gradient(180deg,rgba(135, 135, 135, 0.8),rgba(0, 0, 0, 0.817));
+}
 .eventoSection{
+    height: 100%;
     display:flex;
     flex-direction: row;
+    justify-content: space-evenly;
 }
 .infoWindow{
-    border: 1px solid black;
-    width:8rem;
-    background-color: white;
+    border: 1px solid rgba(18,64,124, 0.9);
+    border-radius: 25px;
+    width:10rem;
+    background-color: rgba(255, 255, 255, 0.2);
     text-align: center;
+    color:rgba(18,64,124, 0.9);
+    letter-spacing: 5px;
+}
+.infoWindow>img{
+    height: 10rem;   
 }
 .eventoInfo{
     width: 40%;
+    color:white;
 }

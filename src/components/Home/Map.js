@@ -3,7 +3,7 @@ import GoogleMapReact from 'google-map-react';
 import '../../css/home.css';
 
 const InfoWindow = (({ evInfo:text }) => (
-    <h1 className="infoWindow">{ text }</h1>
+    <div className="infoWindow"><img alt="antobot" src={require('../../img/antobot-logo-main.svg')}/>{ text }</div>
 ))
 
 export default class Map extends Component{
@@ -13,24 +13,25 @@ export default class Map extends Component{
       }
      
 render(){
-    console.log(this.props.events)
+    console.log(this.props)
     return(
-            <div style={{width:'50vw'}}>
-            <div className="map" style={{ height: '100%', width: '100%'}}>
-            <GoogleMapReact  bootstrapURLKeys={{key:"AIzaSyCB0XrP5yEP0ZOAyvw4OXHXdWCGiDD9sug"}} defaultCenter={this.props.center} defaultZoom={this.props.zoom}>
-            {
+           
+            <div className="map" style={{ height: '100%', width: '40vw'}}>
+            <GoogleMapReact  bootstrapURLKeys={{key:"AIzaSyCB0XrP5yEP0ZOAyvw4OXHXdWCGiDD9sug"}} 
+            defaultCenter={this.props.center} defaultZoom={this.props.zoom}>
+            {this.props.clicked.active &&
             this.props.events.events.map(event=>(
                 <InfoWindow 
                 key={event.id}
-                lat={ event.direccion.lat }
-                lng={ event.direccion.lon }
-                evInfo={ event.title }/>
+                lat={ this.props.clicked.coords.lat }
+                lng={ this.props.clicked.coords.lon }
+                evInfo={ this.props.clicked.ciudad }/>
             ))
 
             }
             </GoogleMapReact>
             </div>
-            </div>
+       
     )
     }
 }
