@@ -6,10 +6,13 @@ import '../../css/home.css';
 
 const CurrentCiudad = (({ ev }) => (
     
-    <h2 style={{marginTop:"0"}}>Encuentrano en {ev[0].ciudad}</h2>
+    <h2 style={{marginTop:"0"}}>Encuentranos en {ev[0].ciudad}</h2>
 ))
 const CurrentEvent = (({ ev }) => (
-    <h1>{ ev[0].titulo }</h1>
+    <div>
+        <h1>{ ev[0].titulo }</h1>
+        <h3>{ev[0].fecha}</h3>
+    </div>
 ))
 export default class Eventos extends Component{
     constructor(props){
@@ -31,7 +34,7 @@ render(){
     return(
         <div className="eventosMain">
         <div className="eventosMain-inner">
-        <div style={{textAlign:"center"}}>
+        <div style={{textAlign:"center",color:"white"}}>
         <CurrentCiudad 
         ev={events.events}
         />
