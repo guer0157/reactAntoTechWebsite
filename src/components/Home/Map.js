@@ -16,7 +16,7 @@ render(){
     console.log(this.props)
     return(
            
-            <div className="map" style={{ height: '100%', width: '40vw'}}>
+            <div className="map" style={{ height: '70%', width: '40vw'}}>
             <GoogleMapReact  bootstrapURLKeys={{key:"AIzaSyCB0XrP5yEP0ZOAyvw4OXHXdWCGiDD9sug"}} 
             defaultCenter={this.props.center} defaultZoom={this.props.zoom}>
             {this.props.clicked.active &&
