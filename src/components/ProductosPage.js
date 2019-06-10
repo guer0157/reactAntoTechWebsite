@@ -1,7 +1,7 @@
 import React from 'react';
 import ListaProductos from '../features/product-listing/ListaProductos'
-
 import data from '../data/products.json'
+
 export default function ProductosPage(props){
 return(
 <div>

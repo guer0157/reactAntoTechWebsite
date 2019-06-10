@@ -1,24 +1,18 @@
 import React from  'react'
 import Producto from './Producto'
 import {connect} from 'react-redux'
-
+// import cartItemsWithQuantities from '../cart/cart';
 
 function ListaProductos(props){
+    console.log("Ze props",props)
         return(
             <div className="product-listing">
-            {props.seletedItem===true &&
-            <div>
-                Hello
-            </div>
-            }
                 {props.producto.map( producto=>(
                         <Producto 
                         key={producto.id}
                         producto={producto}
-                        cartItem={props.cart.filter(cartItem=>cartItem.id===producto.id)[0]}
                         addToCart={props.addToCart}
-                        removeFromCart={props.removeFromCart}
-                        seletedItem={props.seletedItem}
+                        // cart={cartItemsWithQuantities(props.cart)}
                         />
                 ))
                 }
@@ -28,21 +22,20 @@ function ListaProductos(props){
     }
 
     function mapStateToProps(state){
+        console.log(state)
         return {
             cart:state.cart,
         }
     }
-
+//this dispatches an action to the store.
     function mapDispatchToProps(dispatch){
+        console.log("Dispatch", dispatch)
         return{
-        addToCart: (item) => {
-            dispatch({type:'ADD', payload: item})
-        },
-        removeFromCart: item=>{
-            dispatch({type:'REMOVE', payload:item})
-        }
+        addToCart: item => {
+            console.log("where is this item",item);
+            dispatch({type:'ADD', payload: item})},
+        removeFromCart: item => dispatch({type:'REMOVE', payload:item})
     }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(ListaProductos)
-// export default ListaProductos

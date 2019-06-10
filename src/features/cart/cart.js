@@ -1,8 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
-
 function Cart(props){
-    
+
     return(
         <table>
             <thead>
@@ -18,7 +17,7 @@ function Cart(props){
             <tbody>
                 {
                     props.cart.map(item=>
-                        <tr>
+                        <tr key={item.id}>
                             <td>{item.name}</td>
                             <td>{item.quantity}</td>
                             <td><button onClick={()=>{props.addToCart(item)}}>+</button></td>
@@ -34,24 +33,11 @@ function Cart(props){
    
 }
 
-
 function mapStateToProps(state){
+    console.log(state)
     return {
         cart:state.cart,
     }
 }
 
-// function mapDispatchToProps(dispatch){
-//     return{
-//     addToCart: (item) => {
-//         dispatch({type:'ADD', payload: item})
-//     },
-//     removeFromCart: item=>{
-//         dispatch({type:'REMOVE', payload:item})
-//     },
-//     removeAllFromCart:(item)=>{
-//         dispatch({type:'REMOVE_ALL', payload:item})
-//     }
-//     }
-// }
 export default connect(mapStateToProps)(Cart)
