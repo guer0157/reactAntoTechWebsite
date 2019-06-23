@@ -1,0 +1,15 @@
+.diseno-web-section{
+display: flex;
+flex-direction: column;
+}
+.card-section{
+display: flex;
+flex-direction: row;
+width:80%;
+}
+.card-container{
+    
+}
+.card-container>img{
+    width:90%;
+}
