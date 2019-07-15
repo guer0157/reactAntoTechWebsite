@@ -1,0 +1,32 @@
+.feature-section{
+    background-image: url('../../img/tonyRepair.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}    
+.feature-bg-color{
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(180deg,rgba(135, 135, 135, 0.8),rgba(0, 0, 0, 0.817));
+    color:white;
+    padding: 2rem;
+    text-align: center;
+}
+.feature-bg-color>h2{
+    margin: 1rem;
+}
+.feature-card-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.feature-card-container{
+    width: 30%;
+}
+.feature-card-container>img{
+    width: 80%;
+}
+.feature-card-container>h3{
+    margin: 2rem;
+    color:rgba(249,204,80, 0.9);
+}

@@ -2,16 +2,36 @@
    yellow: rgba(249,204,80, 0.9)
    grey: rgba(118,118,118, 0.9)
 */
-.nav-menu{
+.topNav.nav-menu{
     list-style: none;
     background-color: rgba(18,64,124, 1);
     display:flex;
     margin: 0;
+    
 }
-.nav-menu.navbar-nav{
+.footerNav.nav-menu{
+    list-style: none;
+    background-color: rgba(18,64,124, 1);
+    display:flex;
+    flex-direction: column;
+    width: 20%;
+    /* justify-content: flex-start; */
+    /* align-items: flex-start; */
+    margin: 0;
+    
+}
+.footerNav.nav-menu.navbar-nav{
+    justify-content: flex-end;
+    padding: 1rem 1rem 1rem 0;
+    align-items: left;
+    width: 20%;
+    padding-right: 3rem;
+}
+.topNav.nav-menu.navbar-nav{
     justify-content: flex-end;
     padding: 1rem 1rem 1rem 0;
     align-items: center;
+    padding-right: 3rem;
 }
 .nav-menu>li>.nav-item{
     color:rgba(249,204,80, 0.9);

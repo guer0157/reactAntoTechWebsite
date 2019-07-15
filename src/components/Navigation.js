@@ -8,7 +8,7 @@ export default class Navigation extends Component {
     render(){
     return (
         <Navbar>
-        <Nav className="nav-menu" navbar>
+        <Nav className={`${this.props.forNav} nav-menu`} navbar>
           <NavItem><NavLink className="nav-item" tag={RRNavLink} to="/">Inicio</NavLink></NavItem>
           <NavItem><NavLink className="nav-item" tag={RRNavLink} to="/productos">Productos</NavLink></NavItem>
           <NavItem><NavLink className="nav-item" tag={RRNavLink} to="/servicios">Servicios</NavLink></NavItem>

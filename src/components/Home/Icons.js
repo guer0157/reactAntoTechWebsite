@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import '../../css/icons.css';
 
 export default function Icons(props){
 return(

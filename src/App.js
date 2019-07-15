@@ -7,7 +7,7 @@ export default class App extends Component {
   render() {
     return (
     <div className="page-container">
-      <Navigation />
+      <Navigation forNav='topNav'/>
 <Router/>
      </div>
     );
