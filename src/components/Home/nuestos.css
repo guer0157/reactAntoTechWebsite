@@ -4,10 +4,10 @@
     background-repeat: no-repeat;
 }
 .nuestros-bg-img{
-    width: 95.9%;
+    width: 94%;
     margin: 0;
     height: 100%;
-    padding: 2.1rem;
+    padding: 2rem;
     display: flex;
     justify-content: center;
     background: linear-gradient(180deg,rgba(18,64,124, .7),rgba(18,64,124,1));

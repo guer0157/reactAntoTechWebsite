@@ -43,9 +43,7 @@ render(){
         <div className="eventoSection">
         
             <div className="eventoInfo">
-            <CurrentEvent 
-            ev={events.events}
-        />
+            <CurrentEvent ev={events.events}/>
             {
                 events.events.map((event)=>(
                     <p key={event.id} onClick={this.openWindow} 
@@ -56,7 +54,6 @@ render(){
                 ))
             }
             </div>
-           
             <Map events={events} clicked={this.state.isClicked}/>
         </div>
         </div>

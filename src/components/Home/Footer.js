@@ -12,16 +12,18 @@ export default class Footer extends Component {
   }
   render(){
     return (
-     <div className="footer-container">
-       <Navigation  forNav="footerNav" className="footer-nav"/>
-       {this.state && this.state.message &&
-       <a href={`whatsapp://send?text=${this.state.message}!&phone=+14389790112&abid=+14389790112`}>Enviar</a>
-       }
-       {(!this.state || this.state.message === '') &&
-       <p>Enviar</p>
-       }
-       <textarea onChange={this.handleTextChange}/>
-     </div>
+    <div className="footer-container">
+      <Navigation  forNav="footerNav" className="footer-nav"/>
+      <div>
+      <textarea onChange={this.handleTextChange}/>
+      {this.state && this.state.message &&
+      <a href={`whatsapp://send?text=${this.state.message}!&phone=+14389790112&abid=+14389790112`}>Enviar</a>
+      }
+      {(!this.state || this.state.message === '') &&
+        <p>Enviar</p>
+    }
+    </div>
+    </div>
     )
   }
 }

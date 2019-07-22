@@ -7,18 +7,19 @@ const InfoWindow = (({ evInfo:text }) => (
 ))
 
 export default class Map extends Component{
-    static defaultProps = {
-        center: { lat: 19.8392, lng: -98.9849 },
-        zoom:6
-      }
-     
+    constructor(props){
+        super(props)
+        this.state={
+            center: { lat: 19.8392, lng: -98.9849 },
+            zoom:5
+        }
+    }
 render(){
-    console.log(this.props)
+    console.log("the props in lat",this.props.clicked.coords.lat, "lng",this.props.clicked.coords.lon)
     return(
-           
-            <div className="map" style={{ height: '70%', width: '40vw'}}>
+        <div className="map" style={{ height: '70%', width: '40vw'}}>
             <GoogleMapReact  bootstrapURLKeys={{key:"AIzaSyCB0XrP5yEP0ZOAyvw4OXHXdWCGiDD9sug"}} 
-            defaultCenter={this.props.center} defaultZoom={this.props.zoom}>
+            defaultCenter={this.state.center} defaultZoom={this.state.zoom}>
             {this.props.clicked.active &&
             this.props.events.events.map(event=>(
                 <InfoWindow 
@@ -27,11 +28,9 @@ render(){
                 lng={ this.props.clicked.coords.lon }
                 evInfo={ this.props.clicked.ciudad }/>
             ))
-
             }
             </GoogleMapReact>
             </div>
-       
     )
     }
 }
