@@ -1,8 +1,0 @@
-ul>li:hover{
-    animation-name: example;
-    animation-duration: .5s;
-}
-@keyframes example{
-    from{transform:scale(1,1)}
-    to{transform: scale(1.1,1.1)}
-}
