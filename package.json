@@ -1,6 +1,6 @@
 {
-  "name": "antotech-webite",
-  "homepage": "http://guer0157.github.io/reactAntoTechWebsite",
+  "name": "antotech-website",
+  "homepage": "https://guer0157.github.io/reactAntoTechWebsite",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
