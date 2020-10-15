@@ -11,7 +11,7 @@ import ProductosPage from './components/ProductosPage';
 const Router=()=>{
  return (
 <Switch>
-  <Route exact path="/" component={Home}/>
+  <Route path="/" component={Home}/>
   <Route exact path="/productos" component={ProductosPage}/>
   <Route exact path="/carrito" component={CartPage}/>
   <Route exact path="/servicios" component={Servicios}/>
